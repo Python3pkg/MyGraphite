@@ -202,7 +202,7 @@ def _download(build, url, destination):
     filename = url.split("/")[-1]
     _print("Downloading {0} script from ".format(filename) + url)
     try:
-        from urllib2 import urlopen as urlopen
+        from urllib.request import urlopen as urlopen
     except:
         from urllib.request import urlopen as urlopen
     _print("loading script...")
@@ -241,7 +241,7 @@ def _now():
 
 
 def _print(msg):
-    print("[{0}] {1}".format(_now(), msg))
+    print(("[{0}] {1}".format(_now(), msg)))
 
 
 def _load_version():
